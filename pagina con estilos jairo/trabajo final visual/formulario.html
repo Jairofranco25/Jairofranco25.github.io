@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      form {
+      margin: 0 auto;
+      width: 500px;
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+      }
+      label {
+     display: inline-block;
+     width: 90px;     
+     }
+     input,textarea{
+      
+      border: 3px solid #ccc;
+      outline: none;
+    }
+    input:focus, textarea:focus {
+        border: 2px solid blue;
+     }
+    </style>
+    <script type="text/javascript">
+      alert("Bienvenida nayuri sigues con el celular");
+
+      function validar()
+             {
+                 var ok = true;
+ 
+                 if( document.getElementById("name").value == "" || document.getElementById("mail").value == "")
+                 {
+                     alert("Introduzca todos los datos");
+                     ok = false;
+                 }
+ 
+                 return ok;
+             }
+    </script>
+</head>
+<body>
+    <form action="recibe.html" method="get" onsubmit="return validar();">
+        
+           <label for="name">Nombre:</label>
+           <input type="text" id="name" name="user_name">
+        <br>
+           <label for="mail">Correo electrónico:</label>
+           <input type="email" id="mail" name="user_mail">
+         <br>
+           <label for="msg">Mensaje:</label>
+           <br>
+           <textarea id="msg" name="user_message" cols="60" rows="4">hola a todos</textarea>
+         <br>
+       
+            <input type="submit" value="enviar">    
+       </form>
+</body>
+</html>
